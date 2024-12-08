@@ -14,6 +14,7 @@ export default function App({Component, pageProps}: AppProps) {
     initialSelectedId: 'all'
   });
 
+
   return (
     <>
       <Global styles={globalStyles}/>
@@ -22,18 +23,14 @@ export default function App({Component, pageProps}: AppProps) {
           onSearch={(keyword) => console.log('Search:', keyword)}
           notificationCount={3}
         />
-        <ContentWrapper>
-          <Layout>
-            <Navigation
-              groups={CATEGORY_GROUPS}
-              selectedId={selectedId}
-              onSelect={handleSelect}
-            />
-            <Main>
-              <Component {...pageProps} />
-            </Main>
-          </Layout>
-        </ContentWrapper>
+        <Navigation
+          groups={CATEGORY_GROUPS}
+          selectedId={selectedId}
+          onSelect={handleSelect}
+        />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
       </Wrapper>
     </>
   );
@@ -41,19 +38,9 @@ export default function App({Component, pageProps}: AppProps) {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  background-color: #f9fafb;
-`;
-
-const ContentWrapper = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 24px;
-`;
-
-const Layout = styled.div`
   display: flex;
-  gap: 24px;
-  min-height: calc(100vh - 64px);
+  flex-direction: column;
+  background-color: #f9fafb;
 `;
 
 const Main = styled.main`

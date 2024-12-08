@@ -15,7 +15,7 @@ export default function TrendingSection({items}: TrendingSectionProps) {
   return (
     <Container>
       <Header>
-        <Flame className="w-4 h-4 text-pink-500"/>
+        <Flame className="w-4 h-4" color="#EC4899"/>
         <Title>트렌딩</Title>
       </Header>
       <List>
@@ -31,8 +31,9 @@ export default function TrendingSection({items}: TrendingSectionProps) {
 }
 
 const Container = styled.div`
-  background-color: #f9fafb;
+  //background-color: #f9fafb;
   border-radius: 0.5rem;
+  border: 1px;
   padding: 1rem;
 `;
 

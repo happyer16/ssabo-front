@@ -1,13 +1,13 @@
-import { Sparkles } from 'lucide-react';
+import {Sparkles} from 'lucide-react';
 import styled from '@emotion/styled';
-import { TopPostsProps } from './types';
+import {TopPostsProps} from './types';
 import TopPostItem from './TopPostItem';
 
-export default function TopPosts({ posts, onPostClick, className }: TopPostsProps) {
+export default function TopPosts({posts, onPostClick, className}: TopPostsProps) {
   return (
     <Container className={className}>
       <Header>
-        <Sparkles className="w-5 h-5 text-purple-400" />
+        <Sparkles className="w-5 h-5" color="#9333EA"/>
         <Title>실시간 인기글 TOP 5</Title>
       </Header>
       <PostList>

@@ -1,6 +1,5 @@
 // src/components/sidebar/Sidebar/index.tsx
 import styled from '@emotion/styled';
-import LoginSection from '../LoginSection';
 import TrendingSection from '../TrendingSection';
 
 const TRENDING_ITEMS = [
@@ -14,7 +13,6 @@ const TRENDING_ITEMS = [
 export default function Sidebar() {
   return (
     <Container>
-      <LoginSection/>
       <TrendingSection items={TRENDING_ITEMS}/>
     </Container>
   );

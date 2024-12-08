@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import { ThumbsUp, MessageSquare } from 'lucide-react';
-import { TopPost } from './types';
+import {MessageSquare, ThumbsUp} from 'lucide-react';
+import {TopPost} from './types';
 
 interface TopPostItemProps {
   post: TopPost;
   onClick?: (post: TopPost) => void;
 }
 
-export default function TopPostItem({ post, onClick }: TopPostItemProps) {
+export default function TopPostItem({post, onClick}: TopPostItemProps) {
   const handleClick = () => {
     onClick?.(post);
   };
@@ -25,11 +25,11 @@ export default function TopPostItem({ post, onClick }: TopPostItemProps) {
       <PostFooter>
         <InteractionInfo>
           <IconWrapper>
-            <ThumbsUp className="w-3.5 h-3.5" />
+            <ThumbsUp size={12} color="#6b7280"/>
             <span>{post.likes.toLocaleString()}</span>
           </IconWrapper>
           <IconWrapper>
-            <MessageSquare className="w-3.5 h-3.5" />
+            <MessageSquare size={12} color="#6b7280"/>
             <span>{post.comments.toLocaleString()}</span>
           </IconWrapper>
         </InteractionInfo>
@@ -119,4 +119,3 @@ const IconWrapper = styled.div`
   align-items: center;
   gap: 0.25rem;
 `;
-
