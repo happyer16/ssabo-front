@@ -1,0 +1,1 @@
+window.__ENV = {"REACT_ENV_PREFIX":"NEXT_PUBLIC"};
