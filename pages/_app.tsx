@@ -18,8 +18,9 @@ export default function App({Component, pageProps}: AppProps) {
 
   return (
     <>
+
       {process.env.NODE_ENV !== 'development' &&
-        <><GoogleAnalytics gaId="G-X3G3Q7GTTW"/></>
+        <><GoogleAnalytics gaId="G-LGDDWBGXJ0"/></>
       }
       <Script
         id="kakao-login"
