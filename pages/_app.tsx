@@ -1,13 +1,14 @@
 // pages/_app.tsx
 import type {AppProps} from 'next/app';
 import styled from '@emotion/styled';
-
+import Script from "next/script";
 import {Global} from '@emotion/react';
 import {globalStyles} from '@/styles/globalStyles';
 import Header from "@/src/components/layout/Header";
 import Navigation from "@/src/components/layout/Navigation";
 import {useNavigation} from "@/src/hooks/useNavigation";
 import {CATEGORY_GROUPS} from "@/src/constants/categories";
+import {GoogleAnalytics} from '@next/third-parties/google'
 
 export default function App({Component, pageProps}: AppProps) {
   const {selectedId, handleSelect} = useNavigation({
@@ -17,6 +18,14 @@ export default function App({Component, pageProps}: AppProps) {
 
   return (
     <>
+      {process.env.NODE_ENV !== 'development' &&
+        <><GoogleAnalytics gaId="G-X3G3Q7GTTW"/></>
+      }
+      <Script
+        id="kakao-login"
+        strategy="afterInteractive"
+        src="/asset/js/kakao.min.js"
+      />
       <Global styles={globalStyles}/>
       <Wrapper>
         <Header

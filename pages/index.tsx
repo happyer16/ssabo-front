@@ -1,5 +1,9 @@
 import HomeContainer from '@/src/containers/HomeContainer';
+import MetaHead from "@/src/components/metaHead";
 
 export default function HomePage() {
-  return <HomeContainer/>;
+  return <>
+    <MetaHead/>
+    <HomeContainer/>
+  </>;
 }

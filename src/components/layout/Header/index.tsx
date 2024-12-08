@@ -1,6 +1,6 @@
 // src/components/layout/Header/index.tsx
 import styled from '@emotion/styled';
-import {Bell, Heart, Menu, Search, Settings} from 'lucide-react';
+import {Bell, Menu, Search, Settings} from 'lucide-react';
 
 interface HeaderProps {
   onSearch: (keyword: string) => void;
@@ -25,8 +25,7 @@ export default function Header({
             <Menu className="w-6 h-6 text-gray-600"/>
           </MenuButton>
           <Logo>
-            <Heart className="w-5 h-5 text-pink-500"/>
-            <LogoText>뷰티톡</LogoText>
+            <LogoText>뷰티클래스</LogoText>
           </Logo>
           <SearchWrapper>
             <SearchIcon>
