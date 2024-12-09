@@ -1361,16 +1361,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.13.5, @emotion/cache@npm:^11.4.0":
-  version: 11.13.5
-  resolution: "@emotion/cache@npm:11.13.5"
+"@emotion/cache@npm:^11.14.0, @emotion/cache@npm:^11.4.0":
+  version: 11.14.0
+  resolution: "@emotion/cache@npm:11.14.0"
   dependencies:
     "@emotion/memoize": ^0.9.0
     "@emotion/sheet": ^1.4.0
     "@emotion/utils": ^1.4.2
     "@emotion/weak-memoize": ^0.4.0
     stylis: 4.2.0
-  checksum: d4429bcac07730dd65707b8203f855be3d1958183e05d265eeefbeab19822e70c87250fad9abaeaea575d844256d1b8fee348211ef905f7715234df0ee088188
+  checksum: 0a81591541ea43bc7851742e6444b7800d72e98006f94e775ae6ea0806662d14e0a86ff940f5f19d33b4bb2c427c882aa65d417e7322a6e0d5f20fe65ed920c9
   languageName: node
   linkType: hard
 
@@ -1414,14 +1414,14 @@ __metadata:
   linkType: hard
 
 "@emotion/react@npm:^11.11.3, @emotion/react@npm:^11.8.1":
-  version: 11.13.5
-  resolution: "@emotion/react@npm:11.13.5"
+  version: 11.14.0
+  resolution: "@emotion/react@npm:11.14.0"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@emotion/babel-plugin": ^11.13.5
-    "@emotion/cache": ^11.13.5
+    "@emotion/cache": ^11.14.0
     "@emotion/serialize": ^1.3.3
-    "@emotion/use-insertion-effect-with-fallbacks": ^1.1.0
+    "@emotion/use-insertion-effect-with-fallbacks": ^1.2.0
     "@emotion/utils": ^1.4.2
     "@emotion/weak-memoize": ^0.4.0
     hoist-non-react-statics: ^3.3.1
@@ -1430,7 +1430,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 25c6572bdb1472d622a41817881628eb311deafe507bbb1be95c6a4c2c23a19bdd011c368d5794c5a17a1fdf2b5db327480a4c0b85d9322078d531289c163225
+  checksum: 3cf023b11d132b56168713764d6fced8e5a1f0687dfe0caa2782dfd428c8f9e30f9826a919965a311d87b523cd196722aaf75919cd0f6bd0fd57f8a6a0281500
   languageName: node
   linkType: hard
 
@@ -1455,14 +1455,14 @@ __metadata:
   linkType: hard
 
 "@emotion/styled@npm:^11.11.0":
-  version: 11.13.5
-  resolution: "@emotion/styled@npm:11.13.5"
+  version: 11.14.0
+  resolution: "@emotion/styled@npm:11.14.0"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@emotion/babel-plugin": ^11.13.5
     "@emotion/is-prop-valid": ^1.3.0
     "@emotion/serialize": ^1.3.3
-    "@emotion/use-insertion-effect-with-fallbacks": ^1.1.0
+    "@emotion/use-insertion-effect-with-fallbacks": ^1.2.0
     "@emotion/utils": ^1.4.2
   peerDependencies:
     "@emotion/react": ^11.0.0-rc.0
@@ -1470,7 +1470,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 316b3e9f98fc9d3faa54a990ad7f3805611c76a4ebffac9a6c28b6e7e9dd6e9343e9b80c79617af7f64524081a606f3789a89373abf67362fa138028f91b62af
+  checksum: 9c1b842e942e69fb6037d1ab161046d2bcfeff95fd2ccfdab30acaaf6b89dc07b14bb00f8cc8ec14df11e6746c8e4e1d781bc54d10bd739aab44966ded64d4fb
   languageName: node
   linkType: hard
 
@@ -1488,12 +1488,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/use-insertion-effect-with-fallbacks@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.1.0"
+"@emotion/use-insertion-effect-with-fallbacks@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.2.0"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 63665191773b27de66807c53b90091ef0d10d5161381f62726cfceecfe1d8c944f18594b8021805fc81575b64246fd5ab9c75d60efabec92f940c1c410530949
+  checksum: 8ff6aec7f2924526ff8c8f8f93d4b8236376e2e12c435314a18c9a373016e24dfdf984e82bbc83712b8e90ff4783cd765eb39fc7050d1a43245e5728740ddd71
   languageName: node
   linkType: hard
 
@@ -3545,12 +3545,12 @@ __metadata:
   linkType: hard
 
 "call-bind-apply-helpers@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "call-bind-apply-helpers@npm:1.0.0"
+  version: 1.0.1
+  resolution: "call-bind-apply-helpers@npm:1.0.1"
   dependencies:
     es-errors: ^1.3.0
     function-bind: ^1.1.2
-  checksum: 99b8043d52587547aea8d51ee2ed32190b32f52095f3f91c6e655110f7e1bf3bda7d389ce5032f73d66c8ff7d449bb67114e7aba6d9df8ab67c29926b3f71922
+  checksum: 3c55343261bb387c58a4762d15ad9d42053659a62681ec5eb50690c6b52a4a666302a01d557133ce6533e8bd04530ee3b209f23dd06c9577a1925556f8fcccdf
   languageName: node
   linkType: hard
 
@@ -3646,6 +3646,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "class-variance-authority@npm:0.7.1"
+  dependencies:
+    clsx: ^2.1.1
+  checksum: e05ba26ef9ec38f7c675047ce366b067d60af6c954dba08f7802af19a9460a534ae752d8fe1294fff99d0fa94a669b16ccebd87e8a20f637c0736cf2751dd2c5
+  languageName: node
+  linkType: hard
+
 "classnames@npm:^2.3.2":
   version: 2.5.1
   resolution: "classnames@npm:2.5.1"
@@ -3657,6 +3666,13 @@ __metadata:
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 0c16bf660dadb90610553c1d8946a7fdfb81d624adea073b8440b7d795d5b5b08beb3c950c6a2cf16279365a3265158a236876d92bce16423c485c322d7dfaf8
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: acd3e1ab9d8a433ecb3cc2f6a05ab95fe50b4a3cfc5ba47abb6cbf3754585fcb87b84e90c822a1f256c4198e3b41c7f6c391577ffc8678ad587fc0976b24fd57
   languageName: node
   linkType: hard
 
@@ -8209,6 +8225,7 @@ __metadata:
     "@vanilla-extract/esbuild-plugin": ^2.2.2
     "@vanilla-extract/next-plugin": ^2.3.3
     "@vanilla-extract/rollup-plugin": ^1.2.2
+    class-variance-authority: ^0.7.1
     eslint: ^8.21.0
     eslint-config-next: ^12.2.5
     eslint-config-prettier: ^8.6.0

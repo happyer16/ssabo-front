@@ -1,4 +1,4 @@
-// src/components/sidebar/TrendingSection/index.tsx
+// src/components/sidebar/TrendingSection/PostDetail.tsx
 import styled from '@emotion/styled';
 import {Flame} from 'lucide-react';
 

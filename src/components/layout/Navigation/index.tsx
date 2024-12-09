@@ -1,4 +1,4 @@
-// src/components/layout/Navigation/index.tsx
+// src/components/layout/Navigation/PostDetail.tsx
 import styled from '@emotion/styled';
 import {Category, NavigationProps} from './types';
 import {useCallback} from 'react';

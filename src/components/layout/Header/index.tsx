@@ -1,4 +1,4 @@
-// src/components/layout/Header/index.tsx
+// src/components/layout/Header/PostDetail.tsx
 import styled from '@emotion/styled';
 import {Bell, Menu, Search, Settings} from 'lucide-react';
 
