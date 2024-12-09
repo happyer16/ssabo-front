@@ -1,6 +1,6 @@
 import { ThumbsUp, MessageCircle, Share2 } from 'lucide-react';
 import styled from "@emotion/styled";
-import {Button} from "@chakra-ui/react";
+import { Button } from '../ui/button';
 
 interface PostActionsProps {
   likes: number;
@@ -13,13 +13,31 @@ const ActionsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin: 2rem 0;
 `;
 
 const ActionButton = styled(Button)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #4B5563;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background: none;
+    color: #1F2937;
+  }
+`;
+
+const StyledIcon = styled.div`
+ display: flex;
+ align-items: center;
+`;
+
+const ButtonText = styled.span`
+ font-size: 0.875rem;
 `;
 
 export const PostActions = ({
@@ -30,17 +48,23 @@ export const PostActions = ({
                             }: PostActionsProps) => {
   return (
     <ActionsWrapper>
-      <ActionButton variant="outline" onClick={onLike}>
-        <ThumbsUp size={20} />
-        좋아요 {likes}
+      <ActionButton onClick={onLike}>
+        <StyledIcon>
+          <ThumbsUp size={18} />
+        </StyledIcon>
+        <ButtonText>좋아요 {likes}</ButtonText>
       </ActionButton>
-      <ActionButton variant="outline">
-        <MessageCircle size={20} />
-        댓글 {comments}
+      <ActionButton>
+        <StyledIcon>
+          <MessageCircle size={18} />
+        </StyledIcon>
+        <ButtonText>댓글 {comments}</ButtonText>
       </ActionButton>
-      <ActionButton variant="outline" onClick={onShare}>
-        <Share2 size={20} />
-        공유하기
+      <ActionButton onClick={onShare}>
+        <StyledIcon>
+          <Share2 size={18} />
+        </StyledIcon>
+        <ButtonText>공유하기</ButtonText>
       </ActionButton>
     </ActionsWrapper>
   );
