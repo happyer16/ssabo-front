@@ -1,4 +1,4 @@
-// src/components/sidebar/Sidebar/index.tsx
+// src/components/sidebar/Sidebar/PostDetail.tsx
 import styled from '@emotion/styled';
 import TrendingSection from '../TrendingSection';
 

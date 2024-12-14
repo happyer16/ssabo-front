@@ -1,5 +1,5 @@
-// src/components/layout/MobileNavigation/index.tsx
-// src/components/layout/MobileNavigation/index.tsx
+// src/components/layout/MobileNavigation/PostDetail.tsx
+// src/components/layout/MobileNavigation/PostDetail.tsx
 import styled from '@emotion/styled';
 import {BookOpen, Home, Search, User} from 'lucide-react';
 import {MobileNavigationProps} from './types';

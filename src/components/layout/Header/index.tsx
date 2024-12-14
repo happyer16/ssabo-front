@@ -1,30 +1,45 @@
-// src/components/layout/Header/index.tsx
+// src/components/layout/Header/PostDetail.tsx
 import styled from '@emotion/styled';
 import {Bell, Menu, Search, Settings} from 'lucide-react';
+import {useRouter} from "next/router";
+import {UserContext} from "@/src/contexts/UserContext";
+import {useContext} from "react";
+import {UserInfo} from "@/src/entity/user";
 
 interface HeaderProps {
   onSearch: (keyword: string) => void;
   notificationCount?: number;
-  isLoggedIn?: boolean;
-  onLoginClick?: () => void;
+  userInfo?: UserInfo;
   onMenuClick?: () => void;
 }
 
-export default function Header({
-                                 onSearch,
-                                 notificationCount,
-                                 isLoggedIn = false,
-                                 onLoginClick,
-                                 onMenuClick
-                               }: HeaderProps) {
+export default function Header(
+  {
+    onSearch,
+    notificationCount,
+    userInfo,
+    onMenuClick
+  }: HeaderProps) {
+  const router = useRouter();
+  const {user} = useContext(UserContext);
+  console.log(userInfo)
+  console.log(user);
+  const onLoginClick = () => {
+    router.push('/login?redirect=/')
+  }
+
+  const onLogoClick = () => {
+    router.push('/')
+  }
   return (
+
     <Container>
       <Wrapper>
         <LeftSection>
           <MenuButton onClick={onMenuClick} aria-label="메뉴">
             <Menu className="w-6 h-6 text-gray-600"/>
           </MenuButton>
-          <Logo>
+          <Logo onClick={onLogoClick}>
             <LogoText>뷰티클래스</LogoText>
           </Logo>
           <SearchWrapper>
@@ -38,7 +53,7 @@ export default function Header({
           </SearchWrapper>
         </LeftSection>
         <RightSection>
-          {isLoggedIn ? (
+          {userInfo?.isInitialized ? (
             <>
               <IconButton aria-label="알림">
                 <Bell className="w-6 h-6 text-gray-600"/>
@@ -126,8 +141,7 @@ const LogoText = styled.h1`
 const SearchWrapper = styled.div`
   position: relative;
   display: none;
-  width: 100%;
-  max-width: 24rem;
+  width: 350px;
 
   @media (min-width: 768px) {
     display: block;
