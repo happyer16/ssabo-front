@@ -11,7 +11,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {hostname: 'www.notion.so'},
-      {hostname: 'd2znn0ry2r20ti.cloudfront.net'},
+      {hostname: 'd18ht2fhxsp03p.cloudfront.net'},
     ],
   },
   compiler: {

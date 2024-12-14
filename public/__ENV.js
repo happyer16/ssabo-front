@@ -1,1 +1,1 @@
-window.__ENV = {"REACT_ENV_PREFIX":"NEXT_PUBLIC"};
+window.__ENV = {"NEXT_PUBLIC_APP_MODE":"local","NEXT_PUBLIC_API_BASE_URL":"http://localhost:9999","NEXT_PUBLIC_WEB_URL":"http://localhost:3000","REACT_ENV_PREFIX":"NEXT_PUBLIC"};

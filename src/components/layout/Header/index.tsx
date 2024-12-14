@@ -1,12 +1,12 @@
 // src/components/layout/Header/PostDetail.tsx
 import styled from '@emotion/styled';
 import {Bell, Menu, Search, Settings} from 'lucide-react';
+import {useRouter} from "next/router";
 
 interface HeaderProps {
   onSearch: (keyword: string) => void;
   notificationCount?: number;
   isLoggedIn?: boolean;
-  onLoginClick?: () => void;
   onMenuClick?: () => void;
 }
 
@@ -14,10 +14,14 @@ export default function Header({
                                  onSearch,
                                  notificationCount,
                                  isLoggedIn = false,
-                                 onLoginClick,
                                  onMenuClick
                                }: HeaderProps) {
+  const router = useRouter();
+  const onLoginClick = () => {
+    router.push('/login')
+  }
   return (
+
     <Container>
       <Wrapper>
         <LeftSection>
