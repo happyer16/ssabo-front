@@ -9,45 +9,50 @@ export interface AvatarProps {
 }
 
 const AvatarContainer = styled.div`
- position: relative;
- display: flex;
- align-items: center;
- justify-content: center;
- overflow: hidden;
- width: 2.5rem;
- height: 2.5rem;
- border-radius: 9999px;
- background-color: #f3f4f6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
 `;
 
 const AvatarImg = styled.img`
- width: 100%;
- height: 100%;
- object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const AvatarFallbackContainer = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
- width: 100%;
- height: 100%;
- background-color: #f3f4f6;
- color: #6b7280;
- font-size: 0.875rem;
- font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
 `;
 
-export const Avatar = ({ className, ...props }: AvatarProps) => {
+// Functional Component: Avatar
+export const Avatar = ({className, ...props}: AvatarProps) => {
   return <AvatarContainer className={className} {...props} />
 }
+Avatar.displayName = 'Avatar'  // Optional but recommended
 
+// ForwardRef Component: AvatarImage
 export const AvatarImage = React.forwardRef<HTMLImageElement, AvatarProps>(
-  ({ src, alt, className, ...props }, ref) => {
+  ({src, alt, className, ...props}, ref) => {
     return <AvatarImg ref={ref} src={src} alt={alt} className={className} {...props} />
   }
 )
+AvatarImage.displayName = 'AvatarImage'  // Essential for forwardRef components
 
+// Functional Component: AvatarFallback
 export const AvatarFallback = ({
                                  children,
                                  className,
@@ -59,3 +64,4 @@ export const AvatarFallback = ({
     </AvatarFallbackContainer>
   )
 }
+AvatarFallback.displayName = 'AvatarFallback'  // Optional but recommended

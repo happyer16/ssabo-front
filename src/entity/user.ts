@@ -8,6 +8,8 @@ export interface UserInfo {
   isInitialized: boolean;
   userId?: number;
   userToken?: string;
+  name?: string;
+  email?: string;
 }
 
 export interface PhoneNumber {

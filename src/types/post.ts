@@ -7,6 +7,10 @@ export interface Image {
   url: string;
   alt: string;
 }
+export interface Tag {
+  id: number;
+  name: string;
+}
 
 export interface Post {
   id: string;
@@ -17,4 +21,5 @@ export interface Post {
   views: number;
   likes: number;
   images?: Image[];
+  tags: Tag[];
 }
