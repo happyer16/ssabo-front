@@ -78,7 +78,7 @@ export default function MetaHead({
         )}
         <link rel="icon" href="/asset/logo/logo.svg"/>
 
-        <meta name="naver-site-verification" content="c42f78161e752e696b750eee6188bfa90e6fa6dc"/>
+        <meta name="naver-site-verification" content="efb8c237c838b9bb085f34a3b15e2caef6cc48c9"/>
         <meta name="google-adsense-account" content="ca-pub-4686385222672499"/>
         {/* Open Graph */}
         <meta property="og:title" content={ogTitle ?? metaTitle}/>
