@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
-import {Avatar, AvatarFallback, AvatarImage} from '../ui/avatar';
-import { Button } from '../ui/button';
+import {Avatar, AvatarImage} from '../ui/avatar';
+import {Button} from '../ui/button';
+import {getCloudFrontImageUrl} from "@/src/utils/aws-util";
+import {formatDate} from "@/src/utils/date-util";
 
 interface PostHeaderProps {
   title: string;
@@ -81,13 +83,12 @@ export const PostHeader = ({
       <MetaWrapper>
         <AuthorInfo>
           <StyledAvatar>
-            <AvatarImage src={author.image} />
-            <AvatarFallback>{author.name[0]}</AvatarFallback>
+            <AvatarImage src={getCloudFrontImageUrl('/mypage/member_default.svg')}/>
           </StyledAvatar>
           <div>
             <AuthorName>{author.name}</AuthorName>
             <MetaInfo>
-              <span>{createdAt}</span>
+              <span>작성일 {formatDate(createdAt)}</span>
               <span>조회 {views}</span>
               <span>댓글 {commentsCount}</span>
             </MetaInfo>

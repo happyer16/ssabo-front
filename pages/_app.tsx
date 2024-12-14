@@ -7,17 +7,15 @@ import {Global} from '@emotion/react';
 import {globalStyles} from '@/styles/globalStyles';
 import Header from "@/src/components/layout/Header";
 import Navigation from "@/src/components/layout/Navigation";
-import {useNavigation} from "@/src/hooks/useNavigation";
-import {CATEGORY_GROUPS} from "@/src/constants/categories";
 import {GoogleAnalytics} from '@next/third-parties/google'
 import {useUser} from "@/src/hooks/useUser";
+import {navigationItems} from "@/src/components/layout/Navigation/navigationData";
+import {useRouter} from "next/router";
 
 export default function App({Component, pageProps}: AppProps) {
-  const {selectedId, handleSelect} = useNavigation({
-    initialSelectedId: 'all'
-  });
-
   const userState = useUser();
+  const router = useRouter();
+  
   return (
     <>
 
@@ -38,9 +36,8 @@ export default function App({Component, pageProps}: AppProps) {
             userInfo={userState.user}
           />
           <Navigation
-            groups={CATEGORY_GROUPS}
-            selectedId={selectedId}
-            onSelect={handleSelect}
+            items={navigationItems}
+            selectedPath={router.pathname}
           />
           <Main>
             <Component {...pageProps} />

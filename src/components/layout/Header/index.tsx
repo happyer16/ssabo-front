@@ -22,8 +22,6 @@ export default function Header(
   }: HeaderProps) {
   const router = useRouter();
   const {user} = useContext(UserContext);
-  console.log(userInfo)
-  console.log(user);
   const onLoginClick = () => {
     router.push('/login?redirect=/')
   }

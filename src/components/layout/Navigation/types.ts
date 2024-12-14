@@ -1,15 +1,9 @@
-export interface Category {
-  id: string;
-  label: string;
-}
-
-export interface CategoryGroup {
+export interface NavigationItem {
   title: string;
-  items: Category[];
+  link: string;
 }
 
 export interface NavigationProps {
-  groups: CategoryGroup[];
-  selectedId?: string;
-  onSelect?: (category: Category) => void;
+  items: NavigationItem[];
+  selectedPath?: string;
 }
